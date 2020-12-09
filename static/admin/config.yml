@@ -14,26 +14,29 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-
-collections:
   - label: 'Home Pages'
     name: 'home'
-    files: 
+    files:
       - label: 'Home Page'
         name: 'home'
         file: 'content/pages/home.json'
         format: 'json'
-        fields: 
-          - { label: Site Name, name: sitename, widget: string, hint: 'Site name!' }
+        fields:
+          - {
+              label: Site Name,
+              name: sitename,
+              widget: string,
+              hint: 'Site name!',
+            }
           - {
               label: Site Description,
               name: sitedescription,
               widget: string,
-              hint: 'description'
+              hint: 'description',
             }
