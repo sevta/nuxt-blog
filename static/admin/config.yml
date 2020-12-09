@@ -40,3 +40,4 @@ collections:
               widget: string,
               hint: 'description',
             }
+          - { label: Banner Slider, name: bannerslider, widget: image }
