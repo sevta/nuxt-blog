@@ -4,9 +4,17 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: project
+  label: project
+  create: all
+  match: "**/*"
+  templates:
+  - project
 - type: document
   path: blog
   label: blog
+  read_only: false
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
