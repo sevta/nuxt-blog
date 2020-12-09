@@ -41,3 +41,19 @@ collections:
               hint: 'description',
             }
           - { label: Banner Slider, name: bannerslider, widget: image }
+  - name: 'homeslider'
+    label: 'Home Slider'
+    format: 'json'
+    folder: 'content/home-slider'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Date'
+        name: 'date'
+        widget: datetime
+      - label: 'Image'
+        name: 'image'
+        widget: 'image'
