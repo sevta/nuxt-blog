@@ -15,4 +15,5 @@ fields:
   name: date
   label: date
 pages:
+- content/Projects/this-is-project-2.md
 - content/Projects/this-is-project-title-1.md
