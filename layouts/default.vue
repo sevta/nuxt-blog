@@ -1,5 +1,5 @@
 <template>
-  <div class="app-wrapper dark:bg-gray-900 transition duration-300">
+  <div class="app-wrapper dark:bg-gray-900 bg-gray-100 transition duration-300">
     <transition name="fade">
       <AppNotification v-if="showNotify" @close="onClose">
         This page is under construction 😍😍

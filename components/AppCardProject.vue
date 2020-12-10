@@ -1,6 +1,6 @@
 <template>
   <div
-    class="app-card-wrapper shadow-lg hover:shadow-2xl rounded transition duration-300 mb-32 flex font-inter dark:bg-black subpixel-antialiased overflow-hidden"
+    class="app-card-wrapper shadow-lg hover:shadow-2xl rounded transition duration-300 mb-32 flex font-inter dark:bg-black bg-white subpixel-antialiased overflow-hidden"
   >
     <div class="w-1/3 px-8 py-10">
       <div class="font-semibold text-gray-400">Web Design</div>
