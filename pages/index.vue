@@ -1,44 +1,32 @@
 <template>
-  <div class="app-container py-10">
-    <div class="container">
-      <div class="row">
-        <h1 class="text-3xl font-sans font-bold">Blog</h1>
-      </div>
-      <div class="row flex">
-        <img
-          class="w-24 h-24"
-          v-for="(img, i) in img"
-          :key="i"
-          :src="img.image"
-          alt=""
-        />
-      </div>
-      <div class="row flex flex-col mt-8">
-        <div class="blog-list mb-3" v-for="(item, key) in doc" :key="key">
-          <div class="font-bold">{{ item.title }}</div>
-          <div class="text-sm">{{ item.description }}</div>
-          <div class="text-sm">link</div>
-        </div>
-      </div>
-      <div class="row flex flex-col">
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          class="bg-gray-300 flex flex-col p-5"
-        >
-          <input type="text" name="username" placeholder="username" />
-          <textarea
-            name="body"
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="body"
-          ></textarea>
-          <button type="submit">submit</button>
-        </form>
+  <div class="home-wrapper">
+    <AppTitle>
+      I’m your new <span class="text-indigo-400">Nuxt starter</span>. I’m here
+      to help you showcase your <span class="text-red-500">work</span>, your
+      <br />
+      thoughts, and anything else! I’m hooked up to
+      <span class="text-green-400">Forestry</span> and deployed with
+      <br />
+      <span class="text-pink-500">Netlify</span>. 🎉
+    </AppTitle>
+    <div class="container mx-auto py-10 mt-20 px-72">
+      <AppCardProject
+        v-for="(project, i) in projects"
+        :project="project"
+        :key="i"
+      />
+      <div class="flex justify-end -mt-20">
+        <AppButton>See more work</AppButton>
       </div>
     </div>
+    <AppAbout title="About">
+      <AppAboutItem
+        v-for="item in 5"
+        :key="item"
+        left="Wesite"
+        right="Prist is built with Gatsby, Prismic CMS, and emotion styled components. It is mobile ready too! Home: Hero greeting, content block, Work Listing, and About section. Prist is built with Gatsby, Prismic CMS, and emotion styled components. It is mobile ready too! Home: Hero greeting, content block, Work Listing, and About section."
+      />
+    </AppAbout>
   </div>
 </template>
 
@@ -47,10 +35,12 @@ export default {
   async asyncData({ $content }) {
     const doc = await $content('blog').fetch()
     const img = await $content('home-slider').fetch()
+    const projects = await $content('Projects').fetch()
 
     return {
       doc,
-      img
+      img,
+      projects
     }
   },
   head() {
@@ -63,6 +53,7 @@ export default {
   mounted() {
     console.log('doc', this.doc)
     console.log('img', this.img)
+    console.log('projects', this.projects)
   }
 }
 </script>

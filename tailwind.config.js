@@ -11,6 +11,9 @@ module.exports = {
       padding: {
         xl: '5rem'
       }
+    },
+    fontFamily: {
+      inter: 'Inter, sans-serif'
     }
   },
   variants: {},
