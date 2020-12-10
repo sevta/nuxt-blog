@@ -20,6 +20,5 @@ fields:
   label: date
 pages:
 - content/Projects/this-is-title-1.md
-- content/Projects/this-is-title-2.md
 - content/Projects/this-is-title-3.md
 - content/Projects/this-is-title.md
