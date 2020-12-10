@@ -26,5 +26,3 @@ fields:
     schema:
       format: markdown
   label: body
-pages:
-- blog/this-is-my-first-blog-with-forestry.md
