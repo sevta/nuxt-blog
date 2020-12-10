@@ -16,13 +16,6 @@ sections:
   match: "**/*"
   templates:
   - blog
-- type: directory
-  path: project
-  label: project
-  create: all
-  match: "**/*"
-  templates:
-  - project
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
