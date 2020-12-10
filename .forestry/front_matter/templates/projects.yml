@@ -14,3 +14,5 @@ fields:
 - type: datetime
   name: date
   label: date
+pages:
+- content/Projects/this-is-project-title-1.md
