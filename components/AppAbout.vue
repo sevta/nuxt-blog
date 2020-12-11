@@ -1,6 +1,10 @@
 <template>
-  <div class="container mx-auto mt-20 px-72 font-inter">
-    <h1 class="text-3xl font-semibold mb-24 dark:text-gray-100">{{ title }}</h1>
+  <div class="container mx-auto mt-10 sm:mt-20 font-inter">
+    <h1
+      class="text-3xl text-center sm:text-left font-semibold mb-10 sm:mb-24 dark:text-gray-100"
+    >
+      {{ title }}
+    </h1>
     <div class="relative">
       <slot></slot>
     </div>

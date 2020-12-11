@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex w-full z-20 justify-center fixed top-0 left-0 p-3 px-24 font-inter text-sm bg-gradient-to-br from-red-400 to-pink-500 text-white"
+    class="flex w-full tracking-wide z-20 justify-start sm:justify-center fixed top-0 left-0 p-3 px-5 sm:px-24 font-inter text-sm bg-gradient-to-br from-red-400 to-pink-500 text-white"
   >
     <slot></slot>
     <div
-      class="w-24 h-full cursor-pointer absolute right-0 top-0 flex items-center justify-center"
+      class="w-12 sm:w-24 h-full cursor-pointer absolute right-0 top-0 flex items-center justify-center"
       @click="$emit('close')"
     >
       <svg

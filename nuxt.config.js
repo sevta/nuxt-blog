@@ -31,7 +31,7 @@ module.exports = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#D946EF', height: '8px' },
   /*
    ** Global CSS
    */
@@ -72,7 +72,11 @@ module.exports = {
      */
     extend(config, ctx) {}
   },
-  components: true
+  components: true,
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
+  }
 }
 
 /**
